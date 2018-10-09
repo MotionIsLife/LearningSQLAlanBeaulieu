@@ -29,7 +29,11 @@ select emp_id, fname, lname, start_date, title
 from employee
 where title='Head Teller'
 	or start_date > '2002-01-01';
-
+    
+select emp_id, fname, lname, start_date, title
+from employee
+where (title = 'Head Teller' and start_date > '2002-01-01')
+		or (title = 'Teller' and start_date > '2003-01-01');
 
 
 
